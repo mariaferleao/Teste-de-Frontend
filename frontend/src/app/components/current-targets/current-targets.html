@@ -1,10 +1,11 @@
-<p>current-targets works!</p>
 <div class="current-targets">
   <h3>Current Targets</h3>
   <ul>
-    <li *ngFor="let month of months">
-      <span>{{ month.short }}</span>
-      <span>{{ month.value }}</span>
-    </li>
+    @for (month of months; track month) {
+      <li class="monthly-target">
+        <span>{{ month.name }}</span>
+        <span>{{ month.value }}</span>
+      </li>
+    }
   </ul>
 </div>
